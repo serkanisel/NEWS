@@ -1,0 +1,22 @@
+C:\sisel\MyLibrary\MyLib\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.deps.json
+C:\sisel\MyLibrary\MyLib\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\MyLibrary\MyLib\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\MyLibrary\MyLib\MyLib.Data\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+C:\sisel\MyLibrary\MyLib\MyLib.Data\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.csproj.CoreCompileInputs.cache
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.AssemblyInfoInputs.cache
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.AssemblyInfo.cs
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.csproj.CopyComplete
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\MyLibrary\MyLib\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\New EWS\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.deps.json
+C:\sisel\New EWS\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\New EWS\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.csproj.CoreCompileInputs.cache
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.AssemblyInfoInputs.cache
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.AssemblyInfo.cs
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\New EWS\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.runtimeconfig.json
+C:\sisel\New EWS\MyLib.Data\bin\Debug\netcoreapp2.0\WordStudy.Data.runtimeconfig.dev.json
+C:\sisel\New EWS\MyLib.Data\obj\Debug\netcoreapp2.0\WordStudy.Data.csprojResolveAssemblyReference.cache

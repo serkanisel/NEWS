@@ -1,0 +1,26 @@
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.deps.json
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.dll
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.pdb
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csproj.CoreCompileInputs.cache
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.AssemblyInfoInputs.cache
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.AssemblyInfo.cs
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.dll
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.pdb
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.dll
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\bin\Debug\netcoreapp2.0\Microsoft.EntityFrameworkCore.xml
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csprojResolveAssemblyReference.cache
+C:\sisel\MyLibrary\MyLib\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csproj.CopyComplete
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csprojResolveAssemblyReference.cache
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csproj.CoreCompileInputs.cache
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.AssemblyInfoInputs.cache
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.AssemblyInfo.cs
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.dll
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.pdb
+C:\sisel\New EWS\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.deps.json
+C:\sisel\New EWS\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.dll
+C:\sisel\New EWS\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Business.pdb
+C:\sisel\New EWS\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Data.dll
+C:\sisel\New EWS\MyLibBusiness\bin\Debug\netcoreapp2.0\WordStudy.Data.pdb
+C:\sisel\New EWS\MyLibBusiness\obj\Debug\netcoreapp2.0\WordStudy.Business.csproj.CopyComplete

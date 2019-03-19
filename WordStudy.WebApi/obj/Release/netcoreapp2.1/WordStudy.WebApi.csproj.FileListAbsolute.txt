@@ -1,0 +1,11 @@
+D:\My Projects\New EWS\WordStudy.WebApi\bin\Release\netcoreapp2.1\WordStudy.WebApi.deps.json
+D:\My Projects\New EWS\WordStudy.WebApi\bin\Release\netcoreapp2.1\WordStudy.WebApi.runtimeconfig.json
+D:\My Projects\New EWS\WordStudy.WebApi\bin\Release\netcoreapp2.1\WordStudy.WebApi.runtimeconfig.dev.json
+D:\My Projects\New EWS\WordStudy.WebApi\bin\Release\netcoreapp2.1\WordStudy.WebApi.dll
+D:\My Projects\New EWS\WordStudy.WebApi\bin\Release\netcoreapp2.1\WordStudy.WebApi.pdb
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.csproj.CoreCompileInputs.cache
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.AssemblyInfoInputs.cache
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.AssemblyInfo.cs
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.dll
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Release\netcoreapp2.1\WordStudy.WebApi.pdb

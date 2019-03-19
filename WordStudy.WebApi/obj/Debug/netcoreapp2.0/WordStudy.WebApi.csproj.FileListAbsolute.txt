@@ -1,0 +1,8 @@
+C:\sisel\New EWS\WordStudy.WebApi\bin\Debug\netcoreapp2.0\WordStudy.WebApi.deps.json
+C:\sisel\New EWS\WordStudy.WebApi\bin\Debug\netcoreapp2.0\WordStudy.WebApi.runtimeconfig.json
+C:\sisel\New EWS\WordStudy.WebApi\bin\Debug\netcoreapp2.0\WordStudy.WebApi.runtimeconfig.dev.json
+C:\sisel\New EWS\WordStudy.WebApi\bin\Debug\netcoreapp2.0\WordStudy.WebApi.dll
+C:\sisel\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.0\WordStudy.WebApi.csprojResolveAssemblyReference.cache
+C:\sisel\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.0\WordStudy.WebApi.csproj.CoreCompileInputs.cache
+C:\sisel\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.0\WordStudy.WebApi.AssemblyInfoInputs.cache
+C:\sisel\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.0\WordStudy.WebApi.AssemblyInfo.cs
