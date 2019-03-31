@@ -28,3 +28,4 @@ D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi
 D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.AssemblyInfoInputs.cache
 D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.dll
 D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.pdb
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache
