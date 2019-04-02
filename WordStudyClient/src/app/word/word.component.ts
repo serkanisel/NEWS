@@ -16,7 +16,7 @@ export class WordComponent implements OnInit {
   }
 
   getWords() {
-      this.http.get('http://localhost/WordStudy.WebApi/api/word').subscribe(response => {
+      this.http.get('http://localhost:5000/api/word').subscribe(response => {
         this.word = response;
         console.log(this.word);
       }, error => {

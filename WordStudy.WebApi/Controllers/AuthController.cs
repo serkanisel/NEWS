@@ -63,7 +63,7 @@ namespace WordStudy.WebApi.Controllers
         [HttpPost("Login")]
         public async Task<IActionResult> Login([FromBody]UserForLoginDto userForLoginDto)
         {
-            throw new Exception("Computer says no!");
+            //throw new Exception("Computer says no!");
 
             var userFromRepo = await _repo.Login(userForLoginDto.Username.ToLower(), userForLoginDto.Password);
 
@@ -75,7 +75,9 @@ namespace WordStudy.WebApi.Controllers
             var claims = new[]
             {
                 new Claim(ClaimTypes.NameIdentifier,userFromRepo.Id.ToString()),
-                new Claim(ClaimTypes.Name,userFromRepo.UserName)
+                new Claim(ClaimTypes.Name,userFromRepo.UserName),
+                new Claim(ClaimTypes.Name,userFromRepo.Name),
+                new Claim(ClaimTypes.Name,userFromRepo.SurName),
             };
 
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config.GetSection("AppSettings:Token").Value));
