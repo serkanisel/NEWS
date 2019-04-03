@@ -1,18 +1,18 @@
 <nav class="navbar navbar-expand-md navbar-dark bg-primary">
 <div class="container">
-  <a class="navbar-brand" href="#"><span class="font-weight-bold">EWS </span> <span *ngIf="!loggedIn()"class="text-warning font-italic"> English Word Study</span></a>
+  <a class="navbar-brand"  [routerLink]="['/home']"><span class="font-weight-bold">EWS </span> <span *ngIf="!loggedIn()"class="text-warning font-italic"> English Word Study</span></a>
   <ul *ngIf="loggedIn()"  class="navbar-nav mr-auto">
-    <li class="nav-item active">
-      <a class="nav-link" href="#">Words</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/words']">Words</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Lists</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/wordlists']">Lists</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Reading Parts</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/readingparts']">Reading Parts</a>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Games</a>
+    <li class="nav-item" routerLinkActive="active">
+      <a class="nav-link" [routerLink]="['/games']">Games</a>
     </li>
   </ul>
 

@@ -4,25 +4,31 @@ import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import {FormsModule} from '@angular/forms';
 import { BsDropdownModule } from 'ngx-bootstrap';
+import { RouterModule } from '@angular/router';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { WordListComponent } from './wordList/wordList.component';
-import { WordComponent } from './word/word.component';
 import { NavComponent } from './nav/nav.component';
 import { AuthService } from './_services/Auth.service';
 import { HomeComponent } from './home/home.component';
 import { RegisterComponent } from './register/register.component';
 import { ErrorInterceptorProvider } from './_services/error.interceptor';
+import { WordsComponent } from './words/words.component';
+import { GamesComponent } from './games/games.component';
+import { ReadingpartsComponent } from './readingparts/readingparts.component';
+import { WordlistsComponent } from './wordlists/wordlists.component';
+import { appRoutes } from './routes';
 
 @NgModule({
    declarations: [
       AppComponent,
-      WordListComponent,
-      WordComponent,
       NavComponent,
       HomeComponent,
-      RegisterComponent
+      RegisterComponent,
+      WordsComponent,
+      GamesComponent,
+      ReadingpartsComponent,
+      WordlistsComponent
    ],
    imports: [
       BrowserModule,
@@ -30,6 +36,7 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
       HttpClientModule,
       FormsModule,
       BsDropdownModule.forRoot(),
+      RouterModule.forRoot(appRoutes)
    ],
    providers: [
       AuthService,

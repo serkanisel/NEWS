@@ -17,11 +17,12 @@ export class NavComponent implements OnInit {
 
   login() {
     this.authService.login(this.model).subscribe(() => {
-      this.alertifyService.success('logged in successfully');
+      this.alertifyService.success('Wellcome our site!....');
     },
     error => {
       // console.log(error);
-      this.alertifyService.error(error);
+      // this.alertifyService.error(""");
+      this.alertifyService.error('Kullanıcı adı ve/veya şifre hatalı');
     });
   }
 
@@ -31,6 +32,6 @@ export class NavComponent implements OnInit {
 
   logout() {
     localStorage.removeItem('token');
-    this.alertifyService.message('logged out');
+    this.alertifyService.message('Good bye. Come again please.');
   }
 }
