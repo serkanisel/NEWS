@@ -28,7 +28,7 @@ namespace WordStudy.WebApi.Repository
             return _context.Set<T>().Where(predicate).Count(); 
         }
 
-        public void Create(T entity)
+        public void Add(T entity)
         {
             _context.Add(entity);
             Save();

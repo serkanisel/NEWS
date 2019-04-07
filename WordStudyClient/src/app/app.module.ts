@@ -18,6 +18,9 @@ import { GamesComponent } from './games/games.component';
 import { ReadingpartsComponent } from './readingparts/readingparts.component';
 import { WordlistsComponent } from './wordlists/wordlists.component';
 import { appRoutes } from './routes';
+import { MemberListComponent } from './member-list/member-list.component';
+import { ListsComponent } from './lists/lists.component';
+import { MessagesComponent } from './messages/messages.component';
 
 @NgModule({
    declarations: [
@@ -28,7 +31,10 @@ import { appRoutes } from './routes';
       WordsComponent,
       GamesComponent,
       ReadingpartsComponent,
-      WordlistsComponent
+      WordlistsComponent,
+      MemberListComponent,
+      ListsComponent,
+      MessagesComponent
    ],
    imports: [
       BrowserModule,

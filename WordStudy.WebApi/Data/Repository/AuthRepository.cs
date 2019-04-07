@@ -5,6 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using WordStudy.Data;
 using WordStudy.Data.Model;
+using WordStudy.WebApi.Helpers;
 using WordStudy.WebApi.Interfaces;
 
 namespace WordStudy.WebApi.Repository
@@ -49,7 +50,7 @@ namespace WordStudy.WebApi.Repository
             try
             {
                 byte[] passwordHash, passwordSalt;
-                CreatePasswordHash(password, out passwordHash, out passwordSalt);
+                GlobalHelper.CreatePasswordHash(password, out passwordHash, out passwordSalt);
 
                 user.PasswordHash = passwordHash;
                 user.PasswordSalt = passwordSalt;
@@ -67,16 +68,6 @@ namespace WordStudy.WebApi.Repository
             
 
             return user;
-        }
-
-        private void CreatePasswordHash(string password, out byte[] passwordHash, out byte[] passwordSalt)
-        {
-            using (var hmac =new System.Security.Cryptography.HMACSHA512())
-            {
-                passwordSalt = hmac.Key;
-                passwordHash = hmac.ComputeHash(System.Text.Encoding.UTF8.GetBytes(password));
-            }
-                
         }
 
         public async Task<bool> UserExists(string username)

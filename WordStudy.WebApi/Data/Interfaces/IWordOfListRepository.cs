@@ -7,9 +7,9 @@ namespace WordStudy.WebApi.Interfaces
 {
     public interface IWordOfListRepository : IRepository<WordOfList>
     {
-        //IEnumerable<WordOfList> GetAllWithWordAndList();
+        IEnumerable<WordOfList> GetAllWithWordAndList();
 
-        //WordOfList GetWithWordAndList(int id);
+        WordOfList GetWithWordAndList(int id);
 
     }
 }

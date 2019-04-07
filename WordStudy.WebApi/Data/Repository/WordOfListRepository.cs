@@ -16,14 +16,14 @@ namespace WordStudy.WebApi.Repository
 
         }
 
-        //public IEnumerable<WordOfList> GetAllWithWordAndList()
-        //{
-        //    return _context.WordOfList.Include(p => p.WrdList).Include(p => p.Word);
-        //}
+        public IEnumerable<WordOfList> GetAllWithWordAndList()
+        {
+            return _context.WordOfList.Include(p => p.WrdList).Include(p => p.Word);
+        }
 
-        //public WordOfList GetWithWordAndList(int id)
-        //{
-        //    return _context.WordOfList.Where(p => p.ID == id).Include(p => p.Word).Include(p => p.WrdList).FirstOrDefault();
-        //}
+        public WordOfList GetWithWordAndList(int id)
+        {
+            return _context.WordOfList.Where(p => p.Id == id).Include(p => p.Word).Include(p => p.WrdList).FirstOrDefault();
+        }
     }
 }

@@ -10,6 +10,7 @@ namespace WordStudy.Data.Model
     {
         public int ID{ get; set; }
         public string ListName { get; set; }
-        public int UsrID { get; set; }
+
+        public Usr Usr { get; set; }
     }
 }

@@ -4,13 +4,27 @@ import { WordsComponent } from './words/words.component';
 import { WordlistsComponent } from './wordlists/wordlists.component';
 import { GamesComponent } from './games/games.component';
 import { ReadingpartsComponent } from './readingparts/readingparts.component';
+import { MemberListComponent } from './member-list/member-list.component';
+import { MessagesComponent } from './messages/messages.component';
+import { ListsComponent } from './lists/lists.component';
+import { AuthGuard } from './_guards/auth.guard';
 
 export const appRoutes: Routes = [
-  { path: 'home', component: HomeComponent},
-  { path: 'words', component: WordsComponent},
-  { path: 'wordlists', component: WordlistsComponent},
-  { path: 'games', component: GamesComponent},
-  { path: 'readingparts', component: ReadingpartsComponent},
-  { path: '**' , redirectTo: 'home', pathMatch: 'full'},
+  { path: '', component: HomeComponent},
+  {
+    path: '',
+    runGuardsAndResolvers: 'always',
+    canActivate: [AuthGuard],
+    children: [
+      { path: 'words', component: WordsComponent},
+      { path: 'wordlists', component: WordlistsComponent},
+      { path: 'games', component: GamesComponent},
+      { path: 'readingparts', component: ReadingpartsComponent},
+      { path: 'members', component: MemberListComponent , canActivate:  [AuthGuard]},
+      { path: 'messages', component: MessagesComponent},
+      { path: 'lists', component: ListsComponent}
+    ]
+  },
+  { path: '**' , redirectTo: '', pathMatch: 'full'},
 ];
 

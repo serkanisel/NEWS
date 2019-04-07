@@ -11,20 +11,30 @@ namespace WordStudy.WebApi.Controllers
     [Route("api/[controller]")]
     public class ValuesController : Controller
     {
-        private readonly IWordRepository _wordRepository;
+        private readonly IUsrRepository _usrRepository;
 
-        public ValuesController(IWordRepository wordRepository)
+        public ValuesController(IUsrRepository usrRepository)
         {
-            _wordRepository = wordRepository;
+            _usrRepository = usrRepository;
         }
 
         // GET api/values
         [HttpGet]
         public IActionResult Get()
         {
-            IEnumerable<Word> words = _wordRepository.GetAll();
+            IEnumerable<Usr> usrs = _usrRepository.GetAll();
             //return Ok(words);
-            return Ok(words);
+            return Ok(usrs);
+
+            //return new string[] { "value1", "value2" };
+        }
+
+        [HttpPost]
+        public IActionResult GetAllUsers()
+        {
+            IEnumerable<Usr> usrs = _usrRepository.GetAll();
+            //return Ok(words);
+            return Ok(usrs);
 
             //return new string[] { "value1", "value2" };
         }

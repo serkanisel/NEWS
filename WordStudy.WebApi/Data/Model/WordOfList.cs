@@ -8,9 +8,9 @@ namespace WordStudy.Data.Model
     [Table("WordOfList", Schema = "EWSDB")]
     public class WordOfList : BaseEntity
     {
-        public int WordID { get; set; }
+        public Word Word { get; set; }
         
-        public int ListID { get; set; }
+        public WrdList WrdList { get; set; }
 
     }
 }

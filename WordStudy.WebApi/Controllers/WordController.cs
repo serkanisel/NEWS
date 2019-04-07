@@ -36,8 +36,8 @@ namespace WordStudy.WebApi.Controllers
             wrd2.CreatedDate = DateTime.Now;
 
 
-            _wordRepository.Create(wrd);
-            _wordRepository.Create(wrd2);
+            _wordRepository.Add(wrd);
+            _wordRepository.Add(wrd2);
 
             IEnumerable<Word> words = _wordRepository.GetAll();
             //return Ok(words);

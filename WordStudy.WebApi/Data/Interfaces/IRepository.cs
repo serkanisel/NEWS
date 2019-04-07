@@ -11,7 +11,7 @@ namespace WordStudy.WebApi.Interfaces
 
         T GetById(int id);
 
-        void Create(T entity);
+        void Add(T entity);
 
         void Update(T entity);
 

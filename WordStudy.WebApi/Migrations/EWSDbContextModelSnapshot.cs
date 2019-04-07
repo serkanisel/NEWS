@@ -19,6 +19,32 @@ namespace WordStudy.WebApi.Migrations
                 .HasAnnotation("ProductVersion", "2.2.0-rtm-35687")
                 .HasAnnotation("Relational:MaxIdentifierLength", 63);
 
+            modelBuilder.Entity("WordStudy.Data.Model.Photo", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("Serial");
+
+                    b.Property<DateTime>("DateAdded");
+
+                    b.Property<string>("Description");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<bool>("IsMain");
+
+                    b.Property<string>("Url");
+
+                    b.Property<int?>("UsrId");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UsrId");
+
+                    b.ToTable("Photos","EWSDB");
+                });
+
             modelBuilder.Entity("WordStudy.Data.Model.Usr", b =>
                 {
                     b.Property<int>("Id")
@@ -26,7 +52,27 @@ namespace WordStudy.WebApi.Migrations
                         .HasColumnName("Id")
                         .HasColumnType("Serial");
 
+                    b.Property<string>("City");
+
+                    b.Property<string>("Country");
+
+                    b.Property<DateTime>("Created");
+
+                    b.Property<DateTime>("DateOfBirth");
+
+                    b.Property<string>("Gender");
+
+                    b.Property<string>("Interests");
+
+                    b.Property<string>("Introduction");
+
                     b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Knowns");
+
+                    b.Property<DateTime>("LastActive");
+
+                    b.Property<string>("LookingFor");
 
                     b.Property<string>("Name")
                         .IsRequired()
@@ -72,8 +118,6 @@ namespace WordStudy.WebApi.Migrations
                         .IsRequired()
                         .HasMaxLength(1024);
 
-                    b.Property<int>("columnq");
-
                     b.HasKey("Id");
 
                     b.ToTable("Word","EWSDB");
@@ -88,11 +132,15 @@ namespace WordStudy.WebApi.Migrations
 
                     b.Property<bool>("IsDeleted");
 
-                    b.Property<int>("ListID");
+                    b.Property<int?>("WordId");
 
-                    b.Property<int>("WordID");
+                    b.Property<int?>("WrdListID");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("WordId");
+
+                    b.HasIndex("WrdListID");
 
                     b.ToTable("WordOfList","EWSDB");
                 });
@@ -104,11 +152,38 @@ namespace WordStudy.WebApi.Migrations
 
                     b.Property<string>("ListName");
 
-                    b.Property<int>("UsrID");
+                    b.Property<int?>("UsrId");
 
                     b.HasKey("ID");
 
+                    b.HasIndex("UsrId");
+
                     b.ToTable("WrdList","EWSDB");
+                });
+
+            modelBuilder.Entity("WordStudy.Data.Model.Photo", b =>
+                {
+                    b.HasOne("WordStudy.Data.Model.Usr", "Usr")
+                        .WithMany("Photos")
+                        .HasForeignKey("UsrId");
+                });
+
+            modelBuilder.Entity("WordStudy.Data.Model.WordOfList", b =>
+                {
+                    b.HasOne("WordStudy.Data.Model.Word", "Word")
+                        .WithMany()
+                        .HasForeignKey("WordId");
+
+                    b.HasOne("WordStudy.Data.Model.WrdList", "WrdList")
+                        .WithMany()
+                        .HasForeignKey("WrdListID");
+                });
+
+            modelBuilder.Entity("WordStudy.Data.Model.WrdList", b =>
+                {
+                    b.HasOne("WordStudy.Data.Model.Usr", "Usr")
+                        .WithMany()
+                        .HasForeignKey("UsrId");
                 });
 #pragma warning restore 612, 618
         }
