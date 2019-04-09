@@ -1,3 +1,4 @@
+import { UserService } from './_services/user.service';
 import { AlertifyService } from './_services/Alertify.service';
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
@@ -18,7 +19,8 @@ import { GamesComponent } from './games/games.component';
 import { ReadingpartsComponent } from './readingparts/readingparts.component';
 import { WordlistsComponent } from './wordlists/wordlists.component';
 import { appRoutes } from './routes';
-import { MemberListComponent } from './member-list/member-list.component';
+import { MemberListComponent } from './members/member-list/member-list.component';
+import { MemberCardComponent } from './members/member-card/member-card.component';
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 
@@ -34,7 +36,8 @@ import { MessagesComponent } from './messages/messages.component';
       WordlistsComponent,
       MemberListComponent,
       ListsComponent,
-      MessagesComponent
+      MessagesComponent,
+      MemberCardComponent
    ],
    imports: [
       BrowserModule,
@@ -47,7 +50,8 @@ import { MessagesComponent } from './messages/messages.component';
    providers: [
       AuthService,
       AlertifyService,
-      ErrorInterceptorProvider
+      ErrorInterceptorProvider,
+      UserService
    ],
    bootstrap: [
       AppComponent
