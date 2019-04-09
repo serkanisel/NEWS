@@ -8,6 +8,7 @@ import { MemberListComponent } from './members/member-list/member-list.component
 import { MessagesComponent } from './messages/messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
+import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -20,6 +21,7 @@ export const appRoutes: Routes = [
       { path: 'wordlists', component: WordlistsComponent},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
+      { path: 'members/:id', component: MemberDetailComponent , canActivate:  [AuthGuard]},
       { path: 'members', component: MemberListComponent , canActivate:  [AuthGuard]},
       { path: 'messages', component: MessagesComponent},
       { path: 'lists', component: ListsComponent}
