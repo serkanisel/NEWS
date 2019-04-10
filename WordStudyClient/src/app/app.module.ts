@@ -25,6 +25,8 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolver/member-detail.resolver';
+import { MemberListResolver } from './_resolver/member-list.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -66,7 +68,9 @@ export function tokenGetter() {
       AuthService,
       AlertifyService,
       ErrorInterceptorProvider,
-      UserService
+      UserService,
+      MemberDetailResolver,
+      MemberListResolver
    ],
    bootstrap: [
       AppComponent
