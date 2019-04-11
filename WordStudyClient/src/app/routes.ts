@@ -1,3 +1,4 @@
+import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -24,14 +25,9 @@ export const appRoutes: Routes = [
       { path: 'wordlists', component: WordlistsComponent},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
-<<<<<<< HEAD
-      { path: 'members/:id', component: MemberDetailComponent , canActivate:  [AuthGuard]},
-      { path: 'member/edit', component: MemberEditComponent },
-      { path: 'members', component: MemberListComponent , canActivate:  [AuthGuard]},
-=======
       { path: 'members/:id', component: MemberDetailComponent , resolve: {user: MemberDetailResolver}  },
+      { path: 'member/edit', component: MemberEditComponent, resolve: { user:MemberEditResolver}} ,
       { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
->>>>>>> 9e11821694a67fb727e8fcd70ecde541cb7efbd4
       { path: 'messages', component: MessagesComponent},
       { path: 'lists', component: ListsComponent}
     ]

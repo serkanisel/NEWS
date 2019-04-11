@@ -28,6 +28,7 @@ import { MemberDetailComponent } from './members/member-detail/member-detail.com
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
+import { MemberEditResolver } from './_resolver/member-edit.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -72,7 +73,8 @@ export function tokenGetter() {
       ErrorInterceptorProvider,
       UserService,
       MemberDetailResolver,
-      MemberListResolver
+      MemberListResolver,
+      MemberEditResolver
    ],
    bootstrap: [
       AppComponent
