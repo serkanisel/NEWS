@@ -10,6 +10,8 @@ import { MessagesComponent } from './messages/messages.component';
 import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
+import { MemberDetailResolver } from './_resolver/member-detail.resolver';
+import { MemberListResolver } from './_resolver/member-list.resolver';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -22,9 +24,14 @@ export const appRoutes: Routes = [
       { path: 'wordlists', component: WordlistsComponent},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
+<<<<<<< HEAD
       { path: 'members/:id', component: MemberDetailComponent , canActivate:  [AuthGuard]},
       { path: 'member/edit', component: MemberEditComponent },
       { path: 'members', component: MemberListComponent , canActivate:  [AuthGuard]},
+=======
+      { path: 'members/:id', component: MemberDetailComponent , resolve: {user: MemberDetailResolver}  },
+      { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
+>>>>>>> 9e11821694a67fb727e8fcd70ecde541cb7efbd4
       { path: 'messages', component: MessagesComponent},
       { path: 'lists', component: ListsComponent}
     ]
