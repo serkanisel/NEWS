@@ -1,3 +1,4 @@
+import { MemberEditComponent } from './members/member-edit/member-edit.component';
 import { Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { WordsComponent } from './words/words.component';
@@ -22,6 +23,7 @@ export const appRoutes: Routes = [
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
       { path: 'members/:id', component: MemberDetailComponent , canActivate:  [AuthGuard]},
+      { path: 'member/edit', component: MemberEditComponent },
       { path: 'members', component: MemberListComponent , canActivate:  [AuthGuard]},
       { path: 'messages', component: MessagesComponent},
       { path: 'lists', component: ListsComponent}
