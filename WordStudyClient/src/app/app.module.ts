@@ -25,12 +25,9 @@ import { MemberCardComponent } from './members/member-card/member-card.component
 import { ListsComponent } from './lists/lists.component';
 import { MessagesComponent } from './messages/messages.component';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
-<<<<<<< HEAD
 import { MemberEditComponent } from './members/member-edit/member-edit.component';
-=======
 import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
->>>>>>> 9e11821694a67fb727e8fcd70ecde541cb7efbd4
 
 export function tokenGetter() {
    return localStorage.getItem('token');
