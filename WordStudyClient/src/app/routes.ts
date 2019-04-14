@@ -13,6 +13,8 @@ import { AuthGuard } from './_guards/auth.guard';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
+import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
+import { WordResolver } from './_resolver/word.resolver';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -21,12 +23,12 @@ export const appRoutes: Routes = [
     runGuardsAndResolvers: 'always',
     canActivate: [AuthGuard],
     children: [
-      { path: 'words', component: WordsComponent},
+      { path: 'words', component: WordsComponent, resolve: {words: WordResolver}},
       { path: 'wordlists', component: WordlistsComponent},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
       { path: 'members/:id', component: MemberDetailComponent , resolve: {user: MemberDetailResolver}  },
-      { path: 'member/edit', component: MemberEditComponent, resolve: { user:MemberEditResolver}} ,
+      { path: 'member/edit', component: MemberEditComponent, resolve: { user: MemberEditResolver}, canDeactivate: [PreventUnsavedChanges]} ,
       { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
       { path: 'messages', component: MessagesComponent},
       { path: 'lists', component: ListsComponent}

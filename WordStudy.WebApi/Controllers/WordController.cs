@@ -7,6 +7,8 @@ using Microsoft.AspNetCore.Mvc;
 using WordStudy.WebApi.Interfaces;
 using WordStudy.Data.Model;
 using Microsoft.AspNetCore.Authorization;
+using AutoMapper;
+using WordStudy.WebApi.Dtos;
 
 namespace WordStudy.WebApi.Controllers
 {
@@ -15,33 +17,33 @@ namespace WordStudy.WebApi.Controllers
     public class WordController : Controller
     {
         private readonly IWordRepository _wordRepository;
+        private readonly IMapper _mapper; 
 
-        public WordController(IWordRepository wordRepository)
+        public WordController(IWordRepository wordRepository, IMapper mapper)
         {
             _wordRepository = wordRepository;
+            _mapper = mapper;
         }
 
         //[AllowAnonymous]
         [HttpGet]
         public IActionResult Get()
         {
-            Word wrd = new Word();
-            wrd.Body = "Calf";
-            wrd.Mean = "Dana";
-            wrd.CreatedDate = DateTime.Now;
-
-            Word wrd2 = new Word();
-            wrd2.Body = "Cat";
-            wrd2.Mean = "Dana";
-            wrd2.CreatedDate = DateTime.Now;
-
-
-            _wordRepository.Add(wrd);
-            _wordRepository.Add(wrd2);
-
             IEnumerable<Word> words = _wordRepository.GetAll();
-            //return Ok(words);
-            return Ok(words);
+
+            var wordReturn = _mapper.Map<IEnumerable<WordDto>>(words);
+
+            return Ok(wordReturn);
+        }
+
+        [HttpGet("{id}")]
+        public async Task<IActionResult> Get(int id)
+        {
+            Word wrd = await _wordRepository.GetByIdAsync(id);
+
+            var wordReturn = _mapper.Map<WordDto>(wrd);
+
+            return Ok(wordReturn);
         }
 
         [HttpPost("{SearchAsync}")]
@@ -49,7 +51,9 @@ namespace WordStudy.WebApi.Controllers
         {
             IEnumerable<Word> words = _wordRepository.Find(p => p.Body.StartsWith(str));
 
-            return Ok(words);
+            var wordReturn = _mapper.Map<IEnumerable<WordDto>>(words);
+
+            return Ok(wordReturn);
         }
     }
 }

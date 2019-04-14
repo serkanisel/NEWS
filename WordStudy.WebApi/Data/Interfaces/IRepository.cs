@@ -1,22 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Threading.Tasks;
 
 namespace WordStudy.WebApi.Interfaces
 {
     public interface IRepository<T> where T : class
     {
         IEnumerable<T> GetAll();
+        Task<IEnumerable<T>> GetAllAsync();
+
         IEnumerable<T> Find(Func<T, bool> predicate);
 
         T GetById(int id);
 
-        void Add(T entity);
+        Task<T> GetByIdAsync(int id);
 
-        void Update(T entity);
+        bool Add(T entity);
+        
+        bool Update(T entity);
 
-        void Delete(T entity);
-
+        bool Delete(T entity);
+        
         int Count(Func<T, bool> predicate);
 
         

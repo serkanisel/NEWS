@@ -9,6 +9,7 @@ using WordStudy.Data.Model;
 using Microsoft.AspNetCore.Authorization;
 using AutoMapper;
 using WordStudy.WebApi.Dtos;
+using System.Security.Claims;
 
 namespace WordStudy.WebApi.Controllers
 {
@@ -25,15 +26,15 @@ namespace WordStudy.WebApi.Controllers
             _mapper = mapper;
         }
 
-        //[HttpGet("{Get}")]
-        //public IActionResult GetAll()
-        //{
-        //    IEnumerable<Usr> users = _userRepository.GetAll();
+        [HttpGet("{GetAllAsync}")]
+        public IActionResult GetAllAsync()
+        {
+            IEnumerable<Usr> users = _userRepository.GetAll();
 
-        //    var userToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+            var userToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
-        //    return Ok(userToReturn);
-        //}
+            return Ok(userToReturn);
+        }
 
         [HttpGet]
         public async Task<IActionResult> Get()
@@ -53,6 +54,27 @@ namespace WordStudy.WebApi.Controllers
             var userToReturn = _mapper.Map<UserForDetailedDto>(user);
 
             return Ok(userToReturn);
+        }
+
+        [HttpPut("{id}")]
+        public async Task<IActionResult> UpdateUser(int id, [FromBody]UserForUpdateDto userForUpdateDto)
+        {
+            if (id != int.Parse(User.FindFirst(ClaimTypes.NameIdentifier).Value))
+                return Unauthorized();
+
+            var userFromRepo = await _userRepository.GetByIdAsync(id);
+
+            _mapper.Map(userForUpdateDto, userFromRepo);
+
+            try
+            {
+                _userRepository.Update(userFromRepo);
+                return NoContent();
+            }
+            catch (Exception)
+            {
+                throw new Exception($"Updating user {id} failed on save");
+            }
         }
     }
 }

@@ -32,7 +32,8 @@ namespace WordStudy.WebApi.Helpers
                     opt.MapFrom(d => d.DateOfBirth.CalculateAge());
                 });
             CreateMap<Photo, PhotoForDetailedDto>();
-
+            CreateMap<UserForUpdateDto, Usr>();
+            CreateMap<WordDto, Word>();
         }
 
 

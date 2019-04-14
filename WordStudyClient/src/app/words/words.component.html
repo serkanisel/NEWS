@@ -1,3 +1,8 @@
-<p>
-  words works!
-</p>
+ne  yaptın
+<div class="container mt-5">
+  <div class="row">
+    <div *ngFor="let word of words" class="col-lg-2 col-md-3 col-sm-6">
+        <app-word-card [word]="word"></app-word-card>
+    </div>
+  </div>
+</div>

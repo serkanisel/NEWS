@@ -18,45 +18,48 @@ namespace WordStudy.WebApi.Repository
             _context = context;
         }
 
-        protected void Save() => _context.SaveChanges();
-        protected async Task SaveAscync()
+        protected bool Save()
         {
-            await _context.SaveChangesAsync();
+            return _context.SaveChanges() > 0;
+        }
+        protected async Task<bool> SaveAscync()
+        {
+            return await _context.SaveChangesAsync() > 0;
         }
         public int Count(Func<T, bool> predicate)
         {
-            return _context.Set<T>().Where(predicate).Count(); 
+            return _context.Set<T>().Where(predicate).Count();
         }
 
-        public void Add(T entity)
+        public bool Add(T entity)
         {
             _context.Add(entity);
-            Save();
+            return Save();
         }
 
-        public async Task CreateAsync(T entity)
+        public async Task<bool> AddAsync(T entity)
         {
             _context.Add(entity);
-            await SaveAscync();
+            return await SaveAscync();
         }
 
-        public async Task DeleteAsync(T entity)
+        public async Task<bool> DeleteAsync(T entity)
         {
             _context.Remove(entity);
-            await SaveAscync();
+            return await SaveAscync();
         }
 
-        public void Delete(T entity)
+        public bool Delete(T entity)
         {
             _context.Remove(entity);
-            Save();
+            return Save();
         }
 
         public IEnumerable<T> Find(Func<T, bool> predicate)
         {
             return _context.Set<T>().Where(predicate);
         }
-        
+
         public IEnumerable<T> GetAll()
         {
             try
@@ -67,7 +70,7 @@ namespace WordStudy.WebApi.Repository
             {
                 throw new Exception(ex.Message);
             }
-            
+
         }
 
         public async Task<IEnumerable<T>> GetAllAsync()
@@ -85,16 +88,16 @@ namespace WordStudy.WebApi.Repository
             return _context.Set<T>().Find(id);
         }
 
-        public async Task UpdateAsync(T entity)
+        public async Task<bool> UpdateAsync(T entity)
         {
             _context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            await SaveAscync();
+            return await SaveAscync();
         }
 
-        public void Update(T entity)
+        public bool Update(T entity)
         {
             _context.Entry(entity).State = Microsoft.EntityFrameworkCore.EntityState.Modified;
-            Save();
+            return Save();
         }
     }
 }

@@ -3,7 +3,7 @@ import { Photo } from './photo';
 export interface User {
   id: number;
   username: string;
-  name:string;
+  name: string;
   knowns: string;
   age: number;
   gender: string;
