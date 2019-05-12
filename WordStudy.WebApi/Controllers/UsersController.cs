@@ -13,7 +13,7 @@ using System.Security.Claims;
 
 namespace WordStudy.WebApi.Controllers
 {
-    [Authorize]
+    //[Authorize]
     [Route("api/[controller]")]
     public class UsersController : Controller
     {
@@ -26,15 +26,15 @@ namespace WordStudy.WebApi.Controllers
             _mapper = mapper;
         }
 
-        [HttpGet("{GetAllAsync}")]
-        public IActionResult GetAllAsync()
-        {
-            IEnumerable<Usr> users = _userRepository.GetAll();
+        //[HttpGet("{GetAllAsync}")]
+        //public IActionResult GetAllAsync()
+        //{
+        //    IEnumerable<Usr> users = _userRepository.GetAll();
 
-            var userToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
+        //    var userToReturn = _mapper.Map<IEnumerable<UserForListDto>>(users);
 
-            return Ok(userToReturn);
-        }
+        //    return Ok(userToReturn);
+        //}
 
         [HttpGet]
         public async Task<IActionResult> Get()

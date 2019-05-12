@@ -32,6 +32,8 @@ import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { WordCardComponent } from './word-card/word-card.component';
 import { WordResolver } from './_resolver/word.resolver';
+import { WrdListResolver } from './_resolver/wrdList.resolver';
+
 export function tokenGetter() {
    return localStorage.getItem('token');
 }
@@ -79,7 +81,8 @@ export function tokenGetter() {
       MemberListResolver,
       MemberEditResolver,
       PreventUnsavedChanges,
-      WordResolver
+      WordResolver,
+      WrdListResolver
    ],
    bootstrap: [
       AppComponent

@@ -9,7 +9,7 @@ namespace WordStudy.Data.Model
     public class WordOfList : BaseEntity
     {
         public Word Word { get; set; }
-        
+
         public WrdList WrdList { get; set; }
 
     }

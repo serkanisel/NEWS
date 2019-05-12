@@ -34,7 +34,7 @@ namespace WordStudy.Data
                 CreatedDate = DateTime.Now,
                 IsDeleted = false
             },
-        };
+            };
 
 
 

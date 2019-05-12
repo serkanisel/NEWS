@@ -3,7 +3,7 @@
     "windowsAuthentication": false,
     "anonymousAuthentication": true,
     "iis": {
-      "applicationUrl": "http://localhost:5000/",
+      "applicationUrl": "http://localhost/EWS.Api/",
       "sslPort": 0
     },
     "iisExpress": {
@@ -14,7 +14,6 @@
   "profiles": {
     "IIS Express": {
       "commandName": "IISExpress",
-      "launchBrowser": false,
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"
@@ -22,7 +21,7 @@
       "use64Bit": true
     },
     "WordStudy.WebApi": {
-      "commandName": "IISExpress",
+      "commandName": "IIS",
       "launchUrl": "api/values",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development"

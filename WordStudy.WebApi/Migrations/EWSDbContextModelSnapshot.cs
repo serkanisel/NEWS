@@ -134,27 +134,31 @@ namespace WordStudy.WebApi.Migrations
 
                     b.Property<int?>("WordId");
 
-                    b.Property<int?>("WrdListID");
+                    b.Property<int?>("WrdListId");
 
                     b.HasKey("Id");
 
                     b.HasIndex("WordId");
 
-                    b.HasIndex("WrdListID");
+                    b.HasIndex("WrdListId");
 
                     b.ToTable("WordOfList","EWSDB");
                 });
 
             modelBuilder.Entity("WordStudy.Data.Model.WrdList", b =>
                 {
-                    b.Property<int>("ID")
-                        .ValueGeneratedOnAdd();
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("Serial");
+
+                    b.Property<bool>("IsDeleted");
 
                     b.Property<string>("ListName");
 
                     b.Property<int?>("UsrId");
 
-                    b.HasKey("ID");
+                    b.HasKey("Id");
 
                     b.HasIndex("UsrId");
 
@@ -171,18 +175,18 @@ namespace WordStudy.WebApi.Migrations
             modelBuilder.Entity("WordStudy.Data.Model.WordOfList", b =>
                 {
                     b.HasOne("WordStudy.Data.Model.Word", "Word")
-                        .WithMany()
+                        .WithMany("WordOfLists")
                         .HasForeignKey("WordId");
 
                     b.HasOne("WordStudy.Data.Model.WrdList", "WrdList")
-                        .WithMany()
-                        .HasForeignKey("WrdListID");
+                        .WithMany("WordOfLists")
+                        .HasForeignKey("WrdListId");
                 });
 
             modelBuilder.Entity("WordStudy.Data.Model.WrdList", b =>
                 {
                     b.HasOne("WordStudy.Data.Model.Usr", "Usr")
-                        .WithMany()
+                        .WithMany("WrdLists")
                         .HasForeignKey("UsrId");
                 });
 #pragma warning restore 612, 618

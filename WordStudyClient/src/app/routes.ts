@@ -15,6 +15,7 @@ import { MemberDetailResolver } from './_resolver/member-detail.resolver';
 import { MemberListResolver } from './_resolver/member-list.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { WordResolver } from './_resolver/word.resolver';
+import { WrdListResolver } from './_resolver/wrdList.resolver';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -24,7 +25,7 @@ export const appRoutes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'words', component: WordsComponent, resolve: {words: WordResolver}},
-      { path: 'wordlists', component: WordlistsComponent},
+      { path: 'wordlists', component: WordlistsComponent, resolve: {wordlists: WrdListResolver}},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
       { path: 'members/:id', component: MemberDetailComponent , resolve: {user: MemberDetailResolver}  },

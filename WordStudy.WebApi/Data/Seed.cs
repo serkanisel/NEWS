@@ -18,6 +18,42 @@ namespace WordStudy.WebApi.Data
             _context = context;
         }
 
+        public void SeedWords()
+        {
+            if (_context.Word.Any())
+            {
+                return;
+            }
+
+            #region Sozluk Seed
+            List<Word> words = new List<Word>()
+            {
+                new Word()
+            {
+                AddType = 1,
+                Body = "Calf",
+                Mean = "Dana",
+                CreatedDate = DateTime.Now,
+                IsDeleted = false
+            },
+                 new Word()
+            {
+                AddType = 1,
+                Body = "Cat",
+                Mean = "Kedi",
+                CreatedDate = DateTime.Now,
+                IsDeleted = false
+            },
+            };
+
+
+
+            _context.Word.AddRange(words);
+
+            #endregion
+                                                             
+            _context.SaveChanges();
+        }
         public void SeedUsers()
         {
             if (_context.User.Any())

@@ -38,6 +38,7 @@ namespace WordStudy.WebApi
             services.AddScoped<IWrdListRepository, WrdListRepository>();
             services.AddScoped<IWordOfListRepository, WordOfListRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
+            services.AddScoped<IListsRepository, ListsRepository>();
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling =
@@ -82,6 +83,7 @@ namespace WordStudy.WebApi
                 });
             }
 
+            seeder.SeedWords();
             seeder.SeedUsers();
             app.UseCors(x => x.AllowAnyOrigin().AllowAnyMethod().AllowAnyHeader());
             app.UseAuthentication();

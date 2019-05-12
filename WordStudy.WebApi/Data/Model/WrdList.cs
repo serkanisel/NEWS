@@ -6,11 +6,12 @@ using System.Text;
 namespace WordStudy.Data.Model
 {
     [Table("WrdList", Schema = "EWSDB")]
-    public class WrdList
+    public class WrdList : BaseEntity
     {
-        public int ID{ get; set; }
         public string ListName { get; set; }
 
         public Usr Usr { get; set; }
+
+        public ICollection<WordOfList> WordOfLists { get; set; }
     }
 }

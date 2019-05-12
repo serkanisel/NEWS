@@ -15,6 +15,7 @@ export class MemberEditResolver implements Resolve<User> {
       private alertify: AlertifyService) {}
 
     resolve(route: ActivatedRouteSnapshot): Observable<User> {
+        console.log('dana veli was here');
         return this.userService.getUser(this.authService.decodedToken.nameid).pipe(
             catchError( errror => {
                 this.alertify.error('Problem retrieving your data');

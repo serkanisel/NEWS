@@ -25,7 +25,9 @@ export class MemberEditComponent implements OnInit {
     private userService: UserService, private authService: AuthService) { }
 
   ngOnInit() {
+    console.log('dana');
     this.route.data.subscribe(data => {
+      console.log(data);
       this.user = data['user'];
     });
   }

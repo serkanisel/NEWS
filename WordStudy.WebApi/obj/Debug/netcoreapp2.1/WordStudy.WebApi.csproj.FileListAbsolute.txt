@@ -39,14 +39,14 @@ E:\My Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.As
 E:\My Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.dll
 E:\My Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.pdb
 E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.deps.json
+E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.dll
+D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache
 E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.runtimeconfig.json
 E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.runtimeconfig.dev.json
-E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.dll
 E:\Projects\NEWS\WordStudy.WebApi\bin\Debug\netcoreapp2.1\WordStudy.WebApi.pdb
-E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csproj.CoreCompileInputs.cache
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.AssemblyInfoInputs.cache
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.AssemblyInfo.cs
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.dll
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.pdb
-D:\My Projects\New EWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache
+E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache

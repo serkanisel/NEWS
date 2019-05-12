@@ -34,6 +34,7 @@ namespace WordStudy.WebApi.Helpers
             CreateMap<Photo, PhotoForDetailedDto>();
             CreateMap<UserForUpdateDto, Usr>();
             CreateMap<WordDto, Word>();
+            CreateMap<WrdList, WrdListDto>();
         }
 
 

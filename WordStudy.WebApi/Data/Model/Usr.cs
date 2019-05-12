@@ -48,5 +48,7 @@ namespace WordStudy.Data.Model
         public DateTime LastActive { get; set; }
 
         public ICollection<Photo> Photos { get; set; }
+
+        public ICollection<WrdList> WrdLists { get; set; }
     }
 }

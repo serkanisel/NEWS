@@ -23,6 +23,8 @@ namespace WordStudy.Data.Model
         [Required]
         public int AddType { get; set; }
 
+        public ICollection<WordOfList> WordOfLists { get; set; }
+
         [NotMapped]
         public string BodyMean
         {
