@@ -7,7 +7,8 @@ namespace WordStudy.WebApi.Dtos
 {
     public class WrdListDto
     {
-        public int ID { get; set; }
+        public int Id { get; set; }
         public string ListName { get; set; }
+
     }
 }

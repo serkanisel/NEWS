@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { WrdList } from '../_models/WrdList';
+import { List } from '../_models/List';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { environment } from 'src/environments/environment';
@@ -7,12 +7,12 @@ import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
-export class WrdlistService {
+export class ListService {
   baseUrl = environment.apiUrl;
 
   constructor(private http: HttpClient) { }
 
-  getWrdLists(): Observable<WrdList[]> {
-    return this.http.get<WrdList[]>(this.baseUrl + 'Lists');
+  getLists(): Observable<List[]> {
+    return this.http.get<List[]>(this.baseUrl + 'Lists');
   }
 }

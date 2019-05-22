@@ -24,9 +24,9 @@ namespace WordStudy.WebApi.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Get()
+        public IActionResult Get()
         {
-            var lists = await _listsRepository.GetAllAsync();
+            IEnumerable<WrdList> lists = _listsRepository.GetAll();
 
             var listsToReturn = _mapper.Map<IEnumerable<WrdListDto>>(lists);
 

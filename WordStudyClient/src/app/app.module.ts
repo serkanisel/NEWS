@@ -18,7 +18,6 @@ import { ErrorInterceptorProvider } from './_services/error.interceptor';
 import { WordsComponent } from './words/words.component';
 import { GamesComponent } from './games/games.component';
 import { ReadingpartsComponent } from './readingparts/readingparts.component';
-import { WordlistsComponent } from './wordlists/wordlists.component';
 import { appRoutes } from './routes';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MemberCardComponent } from './members/member-card/member-card.component';
@@ -32,8 +31,6 @@ import { MemberEditResolver } from './_resolver/member-edit.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { WordCardComponent } from './word-card/word-card.component';
 import { WordResolver } from './_resolver/word.resolver';
-import { WrdListResolver } from './_resolver/wrdList.resolver';
-import { WrdlistCardComponent } from './wrdlist-card/wrdlist-card.component';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -48,15 +45,13 @@ export function tokenGetter() {
       WordsComponent,
       GamesComponent,
       ReadingpartsComponent,
-      WordlistsComponent,
       MemberListComponent,
       ListsComponent,
       MessagesComponent,
       MemberCardComponent,
       MemberDetailComponent,
       MemberEditComponent,
-      WordCardComponent,
-      WrdlistCardComponent
+      WordCardComponent
    ],
    imports: [
       BrowserModule,
@@ -83,8 +78,7 @@ export function tokenGetter() {
       MemberListResolver,
       MemberEditResolver,
       PreventUnsavedChanges,
-      WordResolver,
-      WrdListResolver
+      WordResolver
    ],
    bootstrap: [
       AppComponent

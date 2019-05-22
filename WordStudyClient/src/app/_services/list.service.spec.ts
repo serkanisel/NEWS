@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { WrdlistService } from './wrdlist.service';
+import { WrdlistService } from './list.service';
 
 describe('WrdlistService', () => {
   beforeEach(() => TestBed.configureTestingModule({}));
