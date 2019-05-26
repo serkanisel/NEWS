@@ -49,4 +49,3 @@ E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.Assem
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.AssemblyInfo.cs
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.dll
 E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.pdb
-E:\Projects\NEWS\WordStudy.WebApi\obj\Debug\netcoreapp2.1\WordStudy.WebApi.csprojAssemblyReference.cache

@@ -45,6 +45,24 @@ namespace WordStudy.WebApi.Migrations
                     b.ToTable("Photos","EWSDB");
                 });
 
+            modelBuilder.Entity("WordStudy.Data.Model.Sentence", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnName("Id")
+                        .HasColumnType("Serial");
+
+                    b.Property<string>("Body");
+
+                    b.Property<bool>("IsDeleted");
+
+                    b.Property<string>("Mean");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Sentences","EWSDB");
+                });
+
             modelBuilder.Entity("WordStudy.Data.Model.Usr", b =>
                 {
                     b.Property<int>("Id")

@@ -16,8 +16,8 @@ export class WordlistsComponent implements OnInit {
 
   ngOnInit() {
     this.route.data.subscribe(data => {
-      this.WrdLists = data['wordlists'];
+      console.log('Listeler' + data['wrdlists']);
+      this.WrdLists = data['wrdlists'];
     });
   }
-
 }

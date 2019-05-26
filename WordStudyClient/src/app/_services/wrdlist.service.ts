@@ -13,6 +13,6 @@ export class WrdlistService {
   constructor(private http: HttpClient) { }
 
   getWrdLists(): Observable<WrdList[]> {
-    return this.http.get<WrdList[]>(this.baseUrl + 'Lists');
+    return this.http.get<WrdList[]>(this.baseUrl + 'WrdList');
   }
 }

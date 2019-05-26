@@ -33,7 +33,8 @@ import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { WordCardComponent } from './word-card/word-card.component';
 import { WordResolver } from './_resolver/word.resolver';
 import { WrdListResolver } from './_resolver/wrdList.resolver';
-import { WrdlistCardComponent } from './wrdlist-card/wrdlist-card.component';
+import { SentenceComponent } from './sentence/sentence.component';
+import { SentenceResolver } from './_resolver/sentence.resolver';
 
 export function tokenGetter() {
    return localStorage.getItem('token');
@@ -56,7 +57,7 @@ export function tokenGetter() {
       MemberDetailComponent,
       MemberEditComponent,
       WordCardComponent,
-      WrdlistCardComponent
+      SentenceComponent
    ],
    imports: [
       BrowserModule,
@@ -84,7 +85,8 @@ export function tokenGetter() {
       MemberEditResolver,
       PreventUnsavedChanges,
       WordResolver,
-      WrdListResolver
+      WrdListResolver,
+      SentenceResolver
    ],
    bootstrap: [
       AppComponent

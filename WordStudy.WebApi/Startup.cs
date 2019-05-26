@@ -39,6 +39,7 @@ namespace WordStudy.WebApi
             services.AddScoped<IWordOfListRepository, WordOfListRepository>();
             services.AddScoped<IAuthRepository, AuthRepository>();
             services.AddScoped<IListsRepository, ListsRepository>();
+            services.AddScoped<ISentencesRepository, SentencesRepository>();
             services.AddMvc().AddJsonOptions(options =>
             {
                 options.SerializerSettings.ReferenceLoopHandling =

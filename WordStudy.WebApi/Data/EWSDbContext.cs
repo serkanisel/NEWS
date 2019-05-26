@@ -22,5 +22,7 @@ namespace WordStudy.Data
         public DbSet<WordOfList> WordOfList { get; set; }
         public DbSet<Photo> Photos { get; set; }
 
+        public DbSet<Sentence> Sentences { get; set; }
+
     }
 }

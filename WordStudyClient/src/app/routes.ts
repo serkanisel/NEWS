@@ -8,7 +8,6 @@ import { GamesComponent } from './games/games.component';
 import { ReadingpartsComponent } from './readingparts/readingparts.component';
 import { MemberListComponent } from './members/member-list/member-list.component';
 import { MessagesComponent } from './messages/messages.component';
-import { ListsComponent } from './lists/lists.component';
 import { AuthGuard } from './_guards/auth.guard';
 import { MemberDetailComponent } from './members/member-detail/member-detail.component';
 import { MemberDetailResolver } from './_resolver/member-detail.resolver';
@@ -16,6 +15,8 @@ import { MemberListResolver } from './_resolver/member-list.resolver';
 import { PreventUnsavedChanges } from './_guards/prevent-unsaved-change.guard';
 import { WordResolver } from './_resolver/word.resolver';
 import { WrdListResolver } from './_resolver/wrdList.resolver';
+import { SentenceComponent } from './sentence/sentence.component';
+import { SentenceResolver } from './_resolver/sentence.resolver';
 
 export const appRoutes: Routes = [
   { path: '', component: HomeComponent},
@@ -25,14 +26,14 @@ export const appRoutes: Routes = [
     canActivate: [AuthGuard],
     children: [
       { path: 'words', component: WordsComponent, resolve: {words: WordResolver}},
-      { path: 'wordlists', component: WordlistsComponent, resolve: {wordlists: WrdListResolver}},
+      { path: 'wordlists', component: WordlistsComponent, resolve: {wrdlists: WrdListResolver}},
+      { path: 'sentences', component: SentenceComponent, resolve: {sentences: SentenceResolver}},
       { path: 'games', component: GamesComponent},
       { path: 'readingparts', component: ReadingpartsComponent},
       { path: 'members/:id', component: MemberDetailComponent , resolve: {user: MemberDetailResolver}  },
       { path: 'member/edit', component: MemberEditComponent, resolve: { user: MemberEditResolver}, canDeactivate: [PreventUnsavedChanges]} ,
       { path: 'members', component: MemberListComponent, resolve: {users: MemberListResolver}},
       { path: 'messages', component: MessagesComponent},
-      { path: 'lists', component: ListsComponent}
     ]
   },
   { path: '**' , redirectTo: '', pathMatch: 'full'},
